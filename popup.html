@@ -1,8 +1,0 @@
-<!doctype html><html><head><meta charset="utf-8"><style>
-body{width:310px;margin:0;padding:18px;background:#f5f5f0;color:#080808;font-family:Arial,sans-serif}
-h1{font-size:28px;line-height:.9;letter-spacing:-.06em;margin:0 0 8px}p{font-size:12px;line-height:1.4;color:#666}
-button{border:0;border-radius:99px;padding:12px 15px;background:#080808;color:#fff;font-weight:800;cursor:pointer;width:100%}
-.badge{display:inline-block;background:#68efb2;padding:6px 9px;border-radius:99px;font-size:9px;font-weight:900;margin-bottom:12px}
-</style></head><body><span class="badge">MOM LENS / PROTOTYPE</span><h1>STEAL THE<br>LESSON.</h1><p>Open any webpage and click the floating M.O.M button. It reads the page like a marketer: hook, proof, cultural signal and CTA.</p><button id="scan">SCAN THIS PAGE →</button><script>
-document.getElementById('scan').onclick=async()=>{const [tab]=await chrome.tabs.query({active:true,currentWindow:true});await chrome.scripting.executeScript({target:{tabId:tab.id},func:()=>window.postMessage({source:'MOM_LENS',action:'open'},'*')});window.close()}
-</script></body></html>
